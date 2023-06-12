@@ -51,4 +51,4 @@ jobs:
           script: |
             docker stop my-app || true
             docker rm my-app || true
-            docker run -d --name my-app -p 4040:4040 -p 27017:27017 -e “mongodb://localhost:27017” amidead/bookshelf-api
+            docker run -d --name my-app -p 4040:4040 -e “mongodb://localhost:27017” amidead/bookshelf-api
