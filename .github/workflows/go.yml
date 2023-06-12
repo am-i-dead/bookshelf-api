@@ -54,6 +54,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            docker pull amidead/bookshelf-api:latest
             docker stop my-app || true
             docker rm my-app || true
             docker run -d --name my-app -p 4040:4040 -e “mongodb://localhost:27017” amidead/bookshelf-api:latest
