@@ -31,7 +31,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: username/repo:latest
+          tags: amidead/bookshelf-api
           dockerfile: Dockerfile
 
       - name: Deploy to server
@@ -44,4 +44,4 @@ jobs:
           script: |
             docker stop my-app || true
             docker rm my-app || true
-            docker run -d --name my-app -p 4040:4040 username/repo:latest
+            docker run -d --name my-app -p 4040:4040 -p 27017:27017 -e “mongodb://localhost:27017” amidead/bookshelf-api
