@@ -1,7 +1,7 @@
 FROM golang:1.20
 
 RUN mkdir /app
-ADD ./app
+ADD . /app
 WORKDIR /app
 
 COPY go.mod .
