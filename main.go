@@ -158,5 +158,5 @@ func main() {
 
 	fmt.Println("Server started!")
 
-	log.Fatal(http.ListenAndServe("localhost:4040", mux))
+	log.Fatal(http.ListenAndServe("0.0.0.0:4040", mux))
 }
