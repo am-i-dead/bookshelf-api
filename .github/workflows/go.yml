@@ -33,6 +33,8 @@ jobs:
           push: true
           tags: amidead/bookshelf-api
           dockerfile: Dockerfile
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
 
       - name: Deploy to server
         uses: appleboy/ssh-action@master
