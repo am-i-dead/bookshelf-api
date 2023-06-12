@@ -156,5 +156,7 @@ func main() {
 	mux.HandleFunc("/", HelloServer)
 	mux.HandleFunc("/book/", BookHandler)
 
+	fmt.Println("Server started!")
+
 	log.Fatal(http.ListenAndServe("localhost:4040", mux))
 }
