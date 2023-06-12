@@ -47,6 +47,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH }}
           port: ${{ secrets.SERVER_PORT }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             docker stop my-app || true
             docker rm my-app || true
